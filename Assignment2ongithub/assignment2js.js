@@ -1,10 +1,3 @@
-<p id="output"> Please enter a number between 1 to 10! </p>
-<input id="input" type="text" placeholder="Enter a number between 0 to 10">
-<br><br>
-<button>Guess</button>
-<button onclick="clearFields();">Reset Game</button>
-
-
 //Game variables
 var mysteryNumber = Math.floor(Math.random() * 10) + 1;
 var playersGuess = 0;
