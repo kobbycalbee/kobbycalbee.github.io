@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 2</title>
+<meta charset="UTF-8">
+<style>
+body {
+    color: purple;
+    font-size: 14pt;
+    background-color:white;
+    font-family: Georgia, "Times New Roman",
+      Times, serif
+  }
+p {
+    margin-top: 7px;
+    margin-bottom: -1px
+}
+</style>
+
+<script>
+function volume(){
+  var radius = parseInt(document.getElementById('radius').value);
+  var height = parseInt(document.getElementById('height').value);
+  document.getElementById('answer1').value = radius*radius*height*3.1415926;
+}
+
+function surfacearea(){
+  var radius = parseInt(document.getElementById('radius').value);
+  var height = parseInt(document.getElementById('height').value);
+  document.getElementById('answer2').value = 2*radius*radius*3.1415926+height*radius*2*3.1415926;
+}
+
+function clearFields() {
+radius.value = "";
+height.value = ""
+answer1.value = "";
+answer2.value = "";
+}
+</script>
+</head>
+<body>
+    <p style="
+        background-color: yellow;
+        color: brown;
+        text-align: center;
+        font-size: 20pt;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-family: sans-serif;
+        border-color: black;
+        border-width: 4px;
+        border-style: double;
+    ">Cylinder Calculator</p>
+<br>
+<p>Radius:</p>
+<input type="text" id="radius" placeholder="Please enter radius"/>
+<br>
+<p>Height:</p>
+<input type="text" id="height" placeholder="Please enter height"/>
+<br>
+<br>
+<img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/277/2017/04/24224155/CNX_BMath_Figure_09_06_024.png"></img>
+<br>
+<button onclick="volume();">Get volume</button>
+<br>
+<input type="text" id="answer1"/>
+<br>
+<button onclick="surfacearea();">Get Surface Area</button>
+<br>
+<input type="text" id="answer2"/>
+<br>
+<button onclick="clearFields();">Reset</button>
+<br>
+<br>
+<br>
+    <p style="
+    font-size: x-small;
+"> Made by Kobby (Ng Wing Hei) </p>
+
+</body>
+
+</html>
